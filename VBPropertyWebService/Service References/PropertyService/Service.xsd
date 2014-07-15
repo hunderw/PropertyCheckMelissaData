@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="urn:mdWebServiceProperty" elementFormDefault="qualified" targetNamespace="urn:mdWebServiceProperty" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="DoLookup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="Request" type="tns:RequestArray" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="RequestArray">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="TransmissionReference" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="CustomerId" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="TotalRecords" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="OptPropertyDetail" type="xs:boolean" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Record" type="tns:RequestRecord" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RequestRecord">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="RecordID" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="AddressKey" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="FIPS" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="APN" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DoLookupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="DoLookupResult" type="tns:ResponseArray" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ResponseArray">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="TransmissionReference" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ProductName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Version" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="TimeStamp" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ResponseResult" type="tns:ResponseFault" />
+      <xs:element minOccurs="1" maxOccurs="1" name="TotalRecords" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Record" type="tns:ResponseRecord" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ResponseFault">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Code" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Description" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ResponseRecord">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="RecordID" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Result" type="tns:ResponseResult" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Parcel" type="tns:ResponseParcel" />
+      <xs:element minOccurs="0" maxOccurs="1" name="PropertyAddress" type="tns:ResponsePropertyAddress" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ParsedPropertyAddress" type="tns:ResponseParsedPropertyAddress" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Owner" type="tns:ResponseOwner" />
+      <xs:element minOccurs="0" maxOccurs="1" name="OwnerAddress" type="tns:ResponseOwnerAddress" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Values" type="tns:ResponseValues" />
+      <xs:element minOccurs="0" maxOccurs="1" name="CurrentSale" type="tns:ResponseCurrentSale" />
+      <xs:element minOccurs="0" maxOccurs="1" name="CurrentDeed" type="tns:ResponseCurrentDeed" />
+      <xs:element minOccurs="0" maxOccurs="1" name="PriorSale" type="tns:ResponsePriorSale" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Lot" type="tns:ResponseLot" />
+      <xs:element minOccurs="0" maxOccurs="1" name="SquareFootage" type="tns:ResponseSquareFootage" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Building" type="tns:ResponseBuilding" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ResponseResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Code" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Description" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ResponseParcel">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResponseBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="FIPSCode" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="FIPSSubCode" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="UnformattedAPN" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="APNSequenceNo" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="FormattedAPN" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="OriginalAPN" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CensusTract" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Zoning" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Range" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Township" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Section" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="QuarterSection" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="HomesteadExempt" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="AbsenteeOwnerCode" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="LandUseCode" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CountyLandUse1" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CountyLandUse2" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="PropertyIndicatorCode" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="MunicipalityName" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ViewCode" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="LocationInfluenceCode" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="NumberOfBuildings" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ResponseBase" />
+  <xs:complexType name="ResponseBuilding">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResponseBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="YearBuilt" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="EffectiveYearBuilt" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="BedRooms" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="TotalRooms" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="TotalBathsCalculated" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="TotalBaths" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="FullBaths" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="HalfBaths" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="OneQuarterBaths" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ThreeQuarterBaths" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="BathFixtures" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="AirConditioningCode" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="BasementCode" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="BuildingCode" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ImprovementCode" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ConditionCode" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ConstructionCode" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ExteriorWallCode" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Fireplace" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Fireplaces" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="FireplaceCode" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="FoundationCode" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="FlooringCode" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="RoofFramingCode" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="GarageCode" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="HeatingCode" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="MobileHome" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ParkingSpaces" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ParkingCode" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Pool" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="PoolCode" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="QualityCode" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="RoofCoverCode" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="RoofTypeCode" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="StoriesCode" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Stories" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="BuildingStyleCode" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Units" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ElectricityCode" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="FuelCode" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="SewerCode" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="WaterCode" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ResponseSquareFootage">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResponseBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="UniversalBuilding" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="BuildingAreaCode" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="BuildingArea" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="LivingSpace" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="GroundFloor" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Gross" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="AdjustedGross" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Basement" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="GarageOrParking" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ResponseLot">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResponseBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="FrontFootage" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DepthFootage" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Acreage" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="SquareFootage" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ResponsePriorSale">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResponseBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="TransactionId" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DocumentYear" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DeedCategoryCode" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="RecordingDate" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="SaleDate" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="SalePrice" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="SaleCode" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="TransactionCode" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="MultiAPNCode" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="MultiAPNCount" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="MortgageAmount" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DeedTypeCode" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ResponseCurrentDeed">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResponseBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="MortgageAmount" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="MortgageDate" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="MortgageLoanTypeCode" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="MortgageDeedTypeCode" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="MortgageTermCode" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="MortgageTerm" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="MortgageDueDate" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="MortgageAssumptionAmount" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="LenderCode" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="LenderName" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="SecondMortgageAmount" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="SecondMortgageLoanTypeCode" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="SecondMortgageDeedTypeCode" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ResponseCurrentSale">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResponseBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="TransactionId" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DocumentYear" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DeedCategoryCode" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="RecordingDate" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="SaleDate" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="SalePrice" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="SaleCode" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="SellerName" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="MultiAPNCode" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="MultiAPNCount" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ResidentalModel" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ResponseValues">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResponseBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="CalculatedTotalValue" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CalculatedLandValue" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CalculatedImprovementValue" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CalculatedTotalValueCode" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CalculatedLandValueCode" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CalculatedImprovementValueCode" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="AssessedTotalValue" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="AssessedLandValue" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="AssessedImprovementValue" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="MarketTotalValue" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="MarketLandValue" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="MarketImprovementValue" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="AppraisedTotalValue" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="AppraisedLandValue" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="AppraisedImprovementValue" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="TaxAmount" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="TaxYear" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ResponseOwnerAddress">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResponseBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Address" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Suite" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="City" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="State" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Zip" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CarrierRoute" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Matchcode" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="MailOptOut" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ResponseOwner">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResponseBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="CorporateOwner" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Name" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Name2" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="UnparsedName1" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="UnparsedName2" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Phone" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="PhoneOptOut" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ResponseParsedPropertyAddress">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResponseBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Range" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="PreDirectional" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="StreetName" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Suffix" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="PostDirectional" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="SuiteName" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="SuiteRange" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ResponsePropertyAddress">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResponseBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Address" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="City" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="State" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Zip" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="AddressKey" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Latitude" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Longitude" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>

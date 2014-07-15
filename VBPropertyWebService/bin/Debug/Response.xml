@@ -1,0 +1,202 @@
+<?xml version="1.0"?>
+<ResponseArray xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TransmissionReference xmlns="urn:mdWebServiceProperty">Testing: DQWS SOAP Sample Code implementation using multiple record inputs.</TransmissionReference>
+  <ProductName xmlns="urn:mdWebServiceProperty">Property Web Service</ProductName>
+  <Version xmlns="urn:mdWebServiceProperty">2.0.0.2366</Version>
+  <TimeStamp xmlns="urn:mdWebServiceProperty">6/18/2014 9:42:35 AM</TimeStamp>
+  <ResponseResult xmlns="urn:mdWebServiceProperty">
+    <Code />
+    <Description />
+  </ResponseResult>
+  <TotalRecords xmlns="urn:mdWebServiceProperty">1</TotalRecords>
+  <Record xmlns="urn:mdWebServiceProperty">
+    <RecordID>1</RecordID>
+    <Result>
+      <Code>YS02,YS04,GS05</Code>
+      <Description>AddressKey Match Found, detail information returned.</Description>
+    </Result>
+    <Parcel>
+      <FIPSCode>39133</FIPSCode>
+      <FIPSSubCode>000</FIPSSubCode>
+      <UnformattedAPN>030350000001022</UnformattedAPN>
+      <APNSequenceNo>001</APNSequenceNo>
+      <FormattedAPN>03-035-00-00-001-022</FormattedAPN>
+      <OriginalAPN>T#190 03-</OriginalAPN>
+      <CensusTract>6003023069</CensusTract>
+      <Zoning />
+      <Range />
+      <Township />
+      <Section />
+      <QuarterSection />
+      <HomesteadExempt />
+      <AbsenteeOwnerCode>O</AbsenteeOwnerCode>
+      <LandUseCode>244</LandUseCode>
+      <CountyLandUse1>447</CountyLandUse1>
+      <CountyLandUse2>4</CountyLandUse2>
+      <PropertyIndicatorCode>27</PropertyIndicatorCode>
+      <MunicipalityName />
+      <ViewCode />
+      <LocationInfluenceCode />
+      <NumberOfBuildings>1</NumberOfBuildings>
+    </Parcel>
+    <PropertyAddress>
+      <Address>1455 Danner Dr</Address>
+      <City>Aurora</City>
+      <State>OH</State>
+      <Zip>44202-9273</Zip>
+      <AddressKey>44202927355</AddressKey>
+      <Latitude>41.27817</Latitude>
+      <Longitude>-81.32872</Longitude>
+    </PropertyAddress>
+    <ParsedPropertyAddress>
+      <Range>1455</Range>
+      <PreDirectional />
+      <StreetName>Danner</StreetName>
+      <Suffix>Dr</Suffix>
+      <PostDirectional />
+      <SuiteName />
+      <SuiteRange />
+    </ParsedPropertyAddress>
+    <Owner>
+      <CorporateOwner>Y</CorporateOwner>
+      <Name>TRC ASSOCIATES LLC</Name>
+      <Name2 />
+      <UnparsedName1>TRC ASSOCIATES LLC</UnparsedName1>
+      <UnparsedName2 />
+      <Phone />
+      <PhoneOptOut />
+    </Owner>
+    <OwnerAddress>
+      <Address>1455 Danner Dr</Address>
+      <Suite />
+      <City>Aurora</City>
+      <State>OH</State>
+      <Zip>44202-9273</Zip>
+      <CarrierRoute>R013</CarrierRoute>
+      <Matchcode>S80</Matchcode>
+      <MailOptOut />
+    </OwnerAddress>
+    <Values>
+      <CalculatedTotalValue>1993900</CalculatedTotalValue>
+      <CalculatedLandValue>257400</CalculatedLandValue>
+      <CalculatedImprovementValue>1736500</CalculatedImprovementValue>
+      <CalculatedTotalValueCode>M</CalculatedTotalValueCode>
+      <CalculatedLandValueCode>M</CalculatedLandValueCode>
+      <CalculatedImprovementValueCode>M</CalculatedImprovementValueCode>
+      <AssessedTotalValue>697870</AssessedTotalValue>
+      <AssessedLandValue>90090</AssessedLandValue>
+      <AssessedImprovementValue>607780</AssessedImprovementValue>
+      <MarketTotalValue>1993900</MarketTotalValue>
+      <MarketLandValue>257400</MarketLandValue>
+      <MarketImprovementValue>1736500</MarketImprovementValue>
+      <AppraisedTotalValue />
+      <AppraisedLandValue />
+      <AppraisedImprovementValue />
+      <TaxAmount>44822.10</TaxAmount>
+      <TaxYear>2013</TaxYear>
+    </Values>
+    <CurrentSale>
+      <TransactionId>1950010139829</TransactionId>
+      <DocumentYear>1994</DocumentYear>
+      <DeedCategoryCode>G</DeedCategoryCode>
+      <RecordingDate>19940425</RecordingDate>
+      <SaleDate />
+      <SalePrice>111850</SalePrice>
+      <SaleCode />
+      <SellerName>SOUTHTRUST BANK</SellerName>
+      <MultiAPNCode />
+      <MultiAPNCount />
+      <ResidentalModel>N</ResidentalModel>
+    </CurrentSale>
+    <CurrentDeed>
+      <MortgageAmount />
+      <MortgageDate />
+      <MortgageLoanTypeCode />
+      <MortgageDeedTypeCode />
+      <MortgageTermCode />
+      <MortgageTerm />
+      <MortgageDueDate />
+      <MortgageAssumptionAmount />
+      <LenderCode />
+      <LenderName />
+      <SecondMortgageAmount />
+      <SecondMortgageLoanTypeCode />
+      <SecondMortgageDeedTypeCode />
+    </CurrentDeed>
+    <PriorSale>
+      <TransactionId />
+      <DocumentYear />
+      <DeedCategoryCode />
+      <RecordingDate />
+      <SaleDate />
+      <SalePrice />
+      <SaleCode />
+      <TransactionCode />
+      <MultiAPNCode />
+      <MultiAPNCount />
+      <MortgageAmount />
+      <DeedTypeCode />
+    </PriorSale>
+    <Lot>
+      <FrontFootage />
+      <DepthFootage />
+      <Acreage>6.0100</Acreage>
+      <SquareFootage>261796</SquareFootage>
+    </Lot>
+    <SquareFootage>
+      <UniversalBuilding>31784</UniversalBuilding>
+      <BuildingAreaCode>B</BuildingAreaCode>
+      <BuildingArea>31784</BuildingArea>
+      <LivingSpace />
+      <GroundFloor />
+      <Gross />
+      <AdjustedGross />
+      <Basement />
+      <GarageOrParking />
+    </SquareFootage>
+    <Building>
+      <YearBuilt>1994</YearBuilt>
+      <EffectiveYearBuilt>2000</EffectiveYearBuilt>
+      <BedRooms>0</BedRooms>
+      <TotalRooms>0</TotalRooms>
+      <TotalBathsCalculated>0.00</TotalBathsCalculated>
+      <TotalBaths>0.00</TotalBaths>
+      <FullBaths>0</FullBaths>
+      <HalfBaths>0</HalfBaths>
+      <OneQuarterBaths />
+      <ThreeQuarterBaths />
+      <BathFixtures />
+      <AirConditioningCode />
+      <BasementCode />
+      <BuildingCode>UWZ</BuildingCode>
+      <ImprovementCode />
+      <ConditionCode>AVE</ConditionCode>
+      <ConstructionCode />
+      <ExteriorWallCode />
+      <Fireplace />
+      <Fireplaces />
+      <FireplaceCode />
+      <FoundationCode />
+      <FlooringCode />
+      <RoofFramingCode />
+      <GarageCode />
+      <HeatingCode />
+      <MobileHome />
+      <ParkingSpaces />
+      <ParkingCode />
+      <Pool />
+      <PoolCode />
+      <QualityCode />
+      <RoofCoverCode />
+      <RoofTypeCode />
+      <StoriesCode>010</StoriesCode>
+      <Stories>1.00</Stories>
+      <BuildingStyleCode>BIL</BuildingStyleCode>
+      <Units />
+      <ElectricityCode>001</ElectricityCode>
+      <FuelCode />
+      <SewerCode />
+      <WaterCode />
+    </Building>
+  </Record>
+</ResponseArray>

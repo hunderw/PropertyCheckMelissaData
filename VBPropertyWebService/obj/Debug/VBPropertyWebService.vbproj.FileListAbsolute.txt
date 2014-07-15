@@ -1,0 +1,10 @@
+c:\users\rovisys\documents\visual studio 2012\Projects\VBPropertyWebService\VBPropertyWebService\bin\Debug\VBPropertyWebService.exe.config
+c:\users\rovisys\documents\visual studio 2012\Projects\VBPropertyWebService\VBPropertyWebService\bin\Debug\VBPropertyWebService.exe
+c:\users\rovisys\documents\visual studio 2012\Projects\VBPropertyWebService\VBPropertyWebService\bin\Debug\VBPropertyWebService.pdb
+c:\users\rovisys\documents\visual studio 2012\Projects\VBPropertyWebService\VBPropertyWebService\bin\Debug\VBPropertyWebService.xml
+c:\users\rovisys\documents\visual studio 2012\Projects\VBPropertyWebService\VBPropertyWebService\obj\Debug\VBPropertyWebService.Form1.resources
+c:\users\rovisys\documents\visual studio 2012\Projects\VBPropertyWebService\VBPropertyWebService\obj\Debug\VBPropertyWebService.Resources.resources
+c:\users\rovisys\documents\visual studio 2012\Projects\VBPropertyWebService\VBPropertyWebService\obj\Debug\VBPropertyWebService.vbproj.GenerateResource.Cache
+c:\users\rovisys\documents\visual studio 2012\Projects\VBPropertyWebService\VBPropertyWebService\obj\Debug\VBPropertyWebService.exe
+c:\users\rovisys\documents\visual studio 2012\Projects\VBPropertyWebService\VBPropertyWebService\obj\Debug\VBPropertyWebService.xml
+c:\users\rovisys\documents\visual studio 2012\Projects\VBPropertyWebService\VBPropertyWebService\obj\Debug\VBPropertyWebService.pdb
